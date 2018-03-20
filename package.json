@@ -1,16 +1,34 @@
 {
-  "name": "example",
-  "version": "0.0.0",
+  "name": "wallet-history",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": "JayChase",
+  "keywords": [
+    "Angular",
+    "Angular-cli",
+    "NPM",
+    "wallet-history"
+  ],
+  "private": false,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "ngc-build": "ngc -p ./tsconfig.lib.json",
+    "inline-build-templates": "gulp inline-build-templates"
   },
-  "private": true,
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/wallet-history.module.js",
+  "typings": "./lib/wallet-history.module.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkaushikl/wallet-history.git"
+  },
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -22,27 +40,18 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "ng2-smart-table": "^1.2.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~6.0.0-beta.6",
+    "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
-    "@types/jasmine": "~2.8.6",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
-    "codelyzer": "~4.1.0",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~2.0.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~1.4.1",
-    "karma-jasmine": "~1.1.1",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "~5.3.0",
-    "ts-node": "~5.0.0",
-    "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "@types/core-js": "^0.9.46",
+    "gulp": "^3.9.1",
+    "gulp-inline-ng2-template": "^4.1.0",
+    "rimraf": "^2.6.2",
+    "typescript": "~2.7.2"
   }
 }
